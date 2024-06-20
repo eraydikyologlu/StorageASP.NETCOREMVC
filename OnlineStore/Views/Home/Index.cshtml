@@ -1,0 +1,147 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">DepoYönetim</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">DepoYönetim'e hoş geldiniz, ürünlerinizi kolayca yönetin ve saklayın.</h2>
+                <a class="btn btn-primary" href="#about">Daha Fazla Bilgi</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hakkında Bölümü -->
+<section class="about-section text-center" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-white mb-4">Ürünlerinizi Kolayca Yönetin</h2>
+                <p class="text-white-50">
+                    DepoYönetim ile ürünlerinizi ekleyebilir, düzenleyebilir ve silebilirsiniz. Kullanıcı dostu platformumuz, depo yönetimini daha kolay ve verimli hale getirir. Mükemmel müşteri hizmetlerimizle kesintisiz bir deneyim yaşayın.
+                </p>
+            </div>
+        </div>
+        <img class="img-fluid" src="assets/img/onlinestore4.webp" alt="Şirket Binası" />
+    </div>
+</section>
+
+<!-- Ürünler Bölümü -->
+<section class="projects-section bg-light" id="projects">
+    <div class="container px-4 px-lg-5">
+        <!-- Öne Çıkan Ürün Satırı -->
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/canonphoto.jpeg" alt="Öne Çıkan Ürün" /></div>
+            <div class="col-xl-4 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h4>Canon Fotoğraf Makinesi</h4>
+                    <p class="text-black-50 mb-0">En kaliteli fotoğrafları çekmek için Canon marka fotoğraf makinesi. DepoYönetim ile ürünlerinizi kolayca yönetin.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Ürün Bir Satırı -->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="assets/img/pcli.webp" alt="Ürün 1" /></div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Dizüstü Bilgisayar</h4>
+                            <p class="mb-0 text-white-50">Son teknolojiye sahip dizüstü bilgisayarlarla çalışmalarınızı verimli hale getirin. DepoYönetim ile her türlü teknolojik ürünlerinizi depolayın ve yönetin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ürün İki Satırı -->
+        <div class="row gx-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="assets/img/ipadreklam.webp" alt="Ürün 2" /></div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">iPad</h4>
+                            <p class="mb-0 text-white-50">iPad ile tüm işleriniz elinizin altında. DepoYönetim ile bu ve benzeri ürünleri kolayca saklayın ve yönetin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Abone Olma Bölümü -->
+<section class="signup-section" id="signup">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                <h2 class="text-white mb-5">Güncellemeler İçin Abone Olun!</h2>
+                <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row input-group-newsletter">
+                        <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="E-posta adresinizi girin..." aria-label="E-posta adresinizi girin..." data-sb-validations="required,email" /></div>
+                        <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Beni Bilgilendir!</button></div>
+                    </div>
+                    <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">Bir e-posta gereklidir.</div>
+                    <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">E-posta geçerli değil.</div>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3 mt-2 text-white">
+                            <div class="fw-bolder">Form başarıyla gönderildi!</div>
+                            Bu formu etkinleştirmek için,
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a> adresinde kayıt olun.
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Mesaj gönderilirken hata oluştu!</div></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- İletişim Bölümü -->
+<section class="contact-section bg-black">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Adres</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">Gazi Üniversitesi Teknoloji Fakültesi Bilgisayar Mühendisliği Bölümü, Ankara</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">E-posta</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50"><a href="mailto:info@deponyönetim.com">info@deponyönetim.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Telefon</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">+90 (538) 867-3188</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+﻿@model ProductDto
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Yeni Ürün</h2>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">İsim</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Marka</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Brand">
+                    <span asp-validation-for="Brand" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Kategori</label>
+                <div class="col-sm-8">
+                    <select class="form-select" asp-for="Category">
+                        <option value="Other">Diğer</option>
+                        <option value="Phones">Telefonlar</option>
+                        <option value="Computers">Bilgisayarlar</option>
+                        <option value="Accessories">Aksesuarlar</option>
+                        <option value="Printers">Yazıcılar</option>
+                        <option value="Cameras">Kameralar</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Fiyat</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Price">
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Açıklama</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" asp-for="Description"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Resim</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="ImageFile" type="file">
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="offset-sm-4 col-sm-4 d-grid">
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </div>
+                <div class="col-sm-4 d-grid">
+                    <a class="btn btn-outline-primary" asp-controller="Products" asp-action="Index" role="button">
+                        İptal
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@model List<Product>
+@{
+}
+
+<h2 class="text-center mb-5">Ürün Listesi</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Products" asp-action="Create">Yeni Ürün</a>
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>İsim</th>
+            <th>Marka</th>
+            <th>Kategori</th>
+            <th>Fiyat</th>
+            <th>Resim</th>
+            <th>Oluşturulma Tarihi</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Brand</td>
+                <td>@product.Category</td>
+                <td>@product.Price₺</td>
+                <td><img src="/products/@product.ImageFileName" width="100" /></td>
+                <td>@product.CreatedAt.ToString("dd/MM/yyyy")</td>
+                <td style="white-space:nowrap">
+                    <a class="btn btn-primary btn-sm" asp-controller="Products" asp-action="Edit" asp-route-id="@product.Id">Düzenle</a>
+                    <a class="btn btn-danger btn-sm" asp-controller="Products" asp-action="Delete" asp-route-id="@product.Id" onclick="return confirm('Emin misiniz?')">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
